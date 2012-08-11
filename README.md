@@ -11,6 +11,12 @@ Download badoop and put it in your $PATH. You could try this:
 curl -o /usr/local/bin https://raw.github.com/jergason/badoop/master/badoop
 ```
 
+If you have [npm](http://npmjs.org) installed, you can install badoop like this:
+
+```bash
+npm install -g badoop
+```
+
 ## Usage
 
 Use it like so:
