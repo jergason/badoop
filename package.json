@@ -1,0 +1,22 @@
+{
+  "name": "badoop",
+  "version": "0.0.0",
+  "description": "Todo list management in bash",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jergason/badoop.git"
+  },
+  "keywords": [
+    "todo-list",
+    "todo",
+    "tasks",
+    "productivity",
+    "procastination"
+  ],
+  "bin": "./badoop",
+  "author": "Jamison Dance <jergason@gmail.com> (http://jamisondance.com/)",
+  "license": "MIT"
+}
