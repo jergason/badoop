@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 
 # vim:filetype=sh
-if [[ -z $TODO ]]; then
-  BADOOP=$TODO
-else
+if [[ "x$TODO" = x ]]; then
   BADOOP=~/.todo.txt
+else
+  BADOOP="$TODO"
 fi
 
 function badoop_usage() {
@@ -19,17 +19,18 @@ function badoop_usage() {
 function badone() {
   # $@ is all the arguments passed in.
   # not sure what d is. Flag to delete anything that matches?
-  if [[ -f $BADOOP ]]; then
-    sed -i -e "/$@/d" $BADOOP;
+  if [[ -f "$BADOOP" ]]; then
+    sed -i -e "/$@/d" "$BADOOP";
   fi
 }
 
 function badoop() {
   # $# is the number of parameters passed in
   # command with no args just shows all todos
+
   if [[ $# == "0" ]]; then
-    if [[ -f $BADOOP ]]; then
-      cat $BADOOP;
+    if [[ -f "$BADOOP" ]]; then
+      cat "$BADOOP";
     fi
   elif [[ $1 == "-h" ]]; then
     badoop_usage
@@ -39,7 +40,7 @@ function badoop() {
   else
     # adding a new todo
     # $@ is a string containing all parameters
-    echo "  • $@" >> $BADOOP;
+    echo "  • $@" >> "$BADOOP"
   fi
 }
 
