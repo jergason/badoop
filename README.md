@@ -16,7 +16,7 @@ curl -o /usr/local/bin https://raw.github.com/jergason/badoop/master/badoop
 Use it like so:
 
 
-```
+```bash
 $ badoop Put badoop up on GitHub
 $ badoop Finish blog post about badoop
 $ badoop
@@ -51,7 +51,7 @@ to a text file to use as the todo list. If it doesn't exist, it will use
 [Things 2](http://culturedcode.com/things/) just got cloud storage. Pffffft.
 badoop has had this forever.
 
-```
+```bash
 $ TODO=~/Dropbox/todo.txt
 $ badoop Tell everyone about my sweet cloud storage.
 $ badoop
