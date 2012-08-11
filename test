@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+# vim:filetype=sh
+
+roundup=$(which roundup)
+
+[[ ! -z "$roundup" ]] || {
+  cat <<MESSAGE 1>&2 ;
+error: roundup missing
+
+Look at https://github.com/bmizerany/roundup for instructions on installing roundup.
+MESSAGE
+
+  exit 1;
+}
+
+$roundup ./*-test.sh

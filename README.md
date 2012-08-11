@@ -59,3 +59,12 @@ $ badoop
 ```
 
 Consider it clouded.
+
+## Contributing
+
+Run the tests with `./test`. Make sure you have [roundup](https://github.com/bmizerany/roundup/)
+to run them. If you add new features, add new tests for them please.
+
+## TODOS
+
+* `npm test` doesn't like roundup. The tests never exit.
