@@ -39,7 +39,7 @@ exit /B 0
 if exist "%BADOOP%" (
     :: Can't do this inline like sed, so we're using a temp file
     :: findstr complains about the -d but ignores it
-    findstr /v /r %* "%BADOOP%" 1> C:\TEMP\badooptemp.txt
+    findstr /v /r %* "%BADOOP%" 1> C:\TEMP\badooptemp.txt 2> NUL
     type C:\TEMP\badooptemp.txt > "%BADOOP%"
 )
 exit /B 0
