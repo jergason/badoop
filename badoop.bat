@@ -18,7 +18,7 @@ if "%1" == "" (
     goto BADONE
 ) else (
     :: Add a new todo
-    echo   • %* >> "%BADOOP%"
+    echo   * %* >> "%BADOOP%"
 )
 exit /B 0
 
