@@ -66,6 +66,16 @@ $ badoop
 
 Consider it clouded.
 
+## Windows
+
+The `badoop.bat` file will run in Windows. Add the file to your PATH, and it
+will work as described above. You can configure a TODO environment variable
+as usual.
+
+Currently, it sometimes prints out the error "The system cannot find the drive
+specified" when you delete an item. The deletion will succeed even if you get
+this error.
+
 ## Contributing
 
 Run the tests with `./test`. Make sure you have [roundup](https://github.com/bmizerany/roundup/)
@@ -74,3 +84,4 @@ to run them. If you add new features, add new tests for them please.
 ## TODOS
 
 * `npm test` doesn't like roundup. The tests never exit.
+* Fix the "system cannot find the drive" error in the Windows version.
