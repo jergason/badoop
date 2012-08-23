@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/jergason/badoop.png)](http://travis-ci.org/jergason/badoop)
 # badoop
 
 Todo list in bash. No buckets, no priorities, no features, just awesomeness.
