@@ -25,12 +25,18 @@ Use it like so:
 ```bash
 $ badoop Put badoop up on GitHub
 $ badoop Finish blog post about badoop
+$ badoop Make brownies
 $ badoop
-  • put badoop up on GitHub
-  • badoop Finish blog post about badoop
+     1	put badoop up on GitHub
+     2  Finish blog post about badoop
+     3  Make brownies
 $ badoop -d GitHub
 $ badoop
-  • badoop Finish blog post about badoop
+  	 1	Finish blog post about badoop
+  	 2  Make brownies
+$ badoop -d 1
+$ badoop
+  	 1	Make brownies.
 ```
 
 badoop can do four things.
@@ -38,7 +44,7 @@ badoop can do four things.
 1. `badoop` with no arguments lists all todo items.
 1. `badoop` followed by anything but a `-d` or `-h` will add that as a todo
     item to your todo list.
-1. `badoop -d` deletes any todo items matching the arguments passed in next
+1. `badoop -d` Deletes todo items based on the provided argument.  If the argument is a phrase then  all todo items containing the phrase will be deleted.  If the argument is an integer then only the todo item  matching the integer will be deleted.
 1. `badoop -h` prints out a help message.
 
 It doesn't do anything with priorities or sorting or nesting or tagging or
