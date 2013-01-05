@@ -20,7 +20,13 @@ function badone() {
   # $@ is all the arguments passed in.
   # not sure what d is. Flag to delete anything that matches?
   if [[ -f "$BADOOP" ]]; then
-    sed -i -e "/$@/d" "$BADOOP";
+    if [[ $@ = "" ]]; then
+      echo "Error: Please provide a keyword matching a word in the TODO item to be deleted or the number of the TODO item to be deleted"
+    elif [[ $@ = *[^0-9]* ]]; then
+      sed -i -e "/$@/d" "$BADOOP";
+    else
+      sed -i $@'d' "$BADOOP";
+    fi    
   fi
 }
 
@@ -30,7 +36,7 @@ function badoop() {
 
   if [[ $# == "0" ]]; then
     if [[ -f "$BADOOP" ]]; then
-      cat "$BADOOP";
+      cat -n "$BADOOP";
     fi
   elif [[ $1 == "-h" ]]; then
     badoop_usage
@@ -40,7 +46,7 @@ function badoop() {
   else
     # adding a new todo
     # $@ is a string containing all parameters
-    echo "  • $@" >> "$BADOOP"
+    echo "$@" >> "$BADOOP"
   fi
 }
 
