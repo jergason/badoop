@@ -34,10 +34,21 @@ it_prints_out_contents_of_todos_when_no_args_give() {
   tear_down_test_file
 }
 
-it_deletes_todos_matching_arguments() {
+it_deletes_todos_matching_word_arguments() {
   set_up_test_file
   echo "SOME STUFF" >> "$TODO"
   $badoop -d SOME
+  res="$($badoop)"
+  test "$res" = ""
+  tear_down_test_file
+}
+
+it_deletes_todo_matching_integer_argument(){
+  set_up_test_file
+  echo "FIRST TODO ENTRY" >> "$TODO"
+  echo "SECOND TODO ENTRY" >> "$TODO"
+  $badoop -d 2
+  $badoop -d 1
   res="$($badoop)"
   test "$res" = ""
   tear_down_test_file
