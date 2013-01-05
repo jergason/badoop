@@ -6,6 +6,7 @@ badoop='./badoop'
 
 set_up_test_file() {
   TODO=./test_todo.txt
+  export TODO
 }
 
 tear_down_test_file() {
